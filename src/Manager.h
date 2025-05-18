@@ -7,7 +7,7 @@
 #include <list>
 #include <__chrono/steady_clock.h>
 
-#include "Component.h"
+#include "Entity.h"
 
 #ifndef MANAGER_H
 #define MANAGER_H
@@ -15,7 +15,7 @@
 
 class Manager {
 protected:
-    std::list<Component*> components;
+    std::list<Entity*> entities;
     std::chrono::steady_clock::time_point constructedAt;
     std::chrono::steady_clock::time_point lastFrame;
     unsigned long frames = 0;
@@ -25,7 +25,9 @@ public:
 
     void Frame();
 
-    void AddComponent(Component *component);
+    [[nodiscard]] unsigned long GetFrames() const;
+
+    void AddEntity(Entity *entity);
 };
 
 

@@ -6,7 +6,7 @@
 #include <iostream>
 
 void Vehicle::Update(double deltaTime) {
-    std::cout << "Vehicle Update" << std::endl;
+    std::cout << "Vehicle (" << name << ") Update" << std::endl;
     std::cout << "Delta Time: " << deltaTime << std::endl;
 }
 

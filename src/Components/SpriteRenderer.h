@@ -2,18 +2,18 @@
 // Created by Ivan Polák on 18/05/2025.
 //
 
-#ifndef VEHICLE_H
-#define VEHICLE_H
-
+#ifndef SPRITERENDERER_H
+#define SPRITERENDERER_H
 #include "../Component.h"
-#include <iostream>
 
 
-class Vehicle: public Component {
+class SpriteRenderer: public Component {
+public:
     void Update(double deltaTime) override;
+
     void Start() override;
 };
 
 
 
-#endif //VEHICLE_H
+#endif //SPRITERENDERER_H

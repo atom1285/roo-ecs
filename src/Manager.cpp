@@ -17,20 +17,26 @@ void Manager::Frame() {
 
     std::cout << "frame = " << frames << std::endl;
 
-    for (const auto component: components) {
+    for (const auto entity: entities) {
         auto currentTime = std::chrono::steady_clock::now();
         std::chrono::duration<double> timeSinceLastFrame = currentTime - lastFrame;
 
         const auto timeSinceLastFrameInMilliseconds = timeSinceLastFrame.count() * 1000;
 
-        component->Update(timeSinceLastFrameInMilliseconds);
+        entity->Update(timeSinceLastFrameInMilliseconds);
+        entity->UpdateComponents(timeSinceLastFrameInMilliseconds);
     }
 
     lastFrame = std::chrono::steady_clock::now();
 }
 
-void Manager::AddComponent(Component *component) {
-    component->Start();
-    std::cout << "Added component" << std::endl;
-    components.push_back(component);
+unsigned long Manager::GetFrames() const {
+    return frames;
+}
+
+void Manager::AddEntity(Entity *entity) {
+    entity->Start();
+    entity->StartComponents();
+    std::cout << "Added Entity" << std::endl;
+    entities.push_back(entity);
 }

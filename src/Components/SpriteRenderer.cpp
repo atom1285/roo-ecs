@@ -11,4 +11,6 @@ void SpriteRenderer::Update(double deltaTime) {
     std::cout << "SpriteRenderer Update" << std::endl;
 }
 
-void SpriteRenderer::Start() {}
+void SpriteRenderer::Start() {
+    std::cout << "SpriteRenderer Start" << std::endl;
+}

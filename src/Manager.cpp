@@ -12,6 +12,8 @@ Manager::Manager() {
     lastFrame = constructedAt;
 }
 
+std::list<Entity*> Manager::entities;
+
 void Manager::Frame() {
     frames++;
 

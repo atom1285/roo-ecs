@@ -6,9 +6,13 @@
 
 #include <iostream>
 #include "../Entity.h"
+#include "../Manager.h"
+#include "../Entities/Person.h"
 
 void SpriteRenderer::Update(double deltaTime) {
     std::cout << "SpriteRenderer Update" << std::endl;
+
+    Manager::AddEntity(new Person("Additional person"));
 }
 
 void SpriteRenderer::Start() {

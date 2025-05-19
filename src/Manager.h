@@ -15,7 +15,7 @@
 
 class Manager {
 protected:
-    std::list<Entity*> entities;
+    static std::list<Entity*> entities;
     std::chrono::steady_clock::time_point constructedAt;
     std::chrono::steady_clock::time_point lastFrame;
     unsigned long frames = 0;
@@ -27,7 +27,7 @@ public:
 
     [[nodiscard]] unsigned long GetFrames() const;
 
-    void AddEntity(Entity *entity);
+    static void AddEntity(Entity *entity);
 };
 
 

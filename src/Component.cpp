@@ -4,8 +4,10 @@
 
 #include "Component.h"
 
-void Component::Start() {
+#include <iostream>
 
+void Component::Start() {
+    std::cout << "Component Start" << std::endl;
 }
 
 void Component::Update(double deltaTime) {

@@ -2,8 +2,8 @@
 // Created by Ivan Polák on 18/05/2025.
 //
 
-#ifndef COMPONENT_H
-#define COMPONENT_H
+#ifndef ENTITY_H
+#define ENTITY_H
 #include <list>
 #include <string>
 
@@ -34,4 +34,4 @@ public:
 };
 
 
-#endif //COMPONENT_H
+#endif //ENTITY_H

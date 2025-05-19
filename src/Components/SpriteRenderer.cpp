@@ -5,9 +5,6 @@
 #include "SpriteRenderer.h"
 
 #include <iostream>
-#include <ostream>
-
-#include "../Entity.h"
 #include "../Entity.h"
 
 void SpriteRenderer::Update(double deltaTime) {

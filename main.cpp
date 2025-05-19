@@ -3,6 +3,7 @@
 #include <chrono>
 
 #include "src/Manager.h"
+#include "src/Components/SpriteRenderer.h"
 #include "src/Entities/Person.h"
 #include "src/Entities/Vehicle.h"
 
@@ -11,7 +12,11 @@ int main() {
 
     Manager manager;
 
-    manager.AddEntity(new Vehicle("Starting Vehicle"));
+    auto vehicle = new Vehicle("Starting Vehicle");
+
+    vehicle->AddComponent(new SpriteRenderer);
+
+    manager.AddEntity(vehicle);
     manager.AddEntity(new Person("Starting Person"));
 
     while (true) {

@@ -18,13 +18,13 @@ void Entity::AddComponent(Component *component) {
 }
 
 void Entity::StartComponents() {
-    for (const auto& component : components) {
+    for (const auto component: components) {
         component->Start();
     }
 }
 
 void Entity::UpdateComponents(double deltaTime) {
-    for (const auto& component : components) {
+    for (const auto component: components) {
         component->Update(deltaTime);
     }
 }
